@@ -20,5 +20,21 @@ git diff branch1 branch2 -- path/to/file
 git difftool -x C:/Programs/WinMerge/WinMergeU.exe branch1 branch2 -- path/to/file
 
 # abort merge
+git merge --abort
 git reset --hard HEAD
 
+
+=============================================
+Copy commit somewhere
+
+Go to the stable branch:
+git checkout stable
+
+Copy the desired commit to the current branch.
+git cherry-pick e87568fa
+
+You can now return to dev:
+git checkout dev
+
+=============================================
+http://sethrobertson.github.io/GitFixUm/fixup.html
