@@ -23,6 +23,9 @@ git difftool -x C:/Programs/WinMerge/WinMergeU.exe branch1 branch2 -- path/to/fi
 git merge --abort
 git reset --hard HEAD
 
+# delete remote tag
+git tag -d 12345
+git push origin :refs/tags/12345
 
 =============================================
 Copy commit somewhere
