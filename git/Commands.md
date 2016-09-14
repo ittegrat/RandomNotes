@@ -19,13 +19,19 @@ git merge --no-commit --no-ff master
 git diff branch1 branch2 -- path/to/file
 git difftool -x C:/Programs/WinMerge/WinMergeU.exe branch1 branch2 -- path/to/file
 
-# abort merge
+## abort merge
 git merge --abort
 git reset --hard HEAD
 
-# delete remote tag
+## delete remote tag
 git tag -d 12345
 git push origin :refs/tags/12345
+
+## reset old authors
+git rebase -i XXX
+foreach:
+ 1. git commit --amend --author="Author Name <email@address.com>"
+ 2. git rebase --continue
 
 =============================================
 Copy commit somewhere
