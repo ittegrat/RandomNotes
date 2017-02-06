@@ -27,11 +27,12 @@ git reset --hard HEAD
 git tag -d 12345
 git push origin :refs/tags/12345
 
-## reset old authors
-git rebase -i XXX
-foreach:
- 1. git commit --amend --author="Author Name <email@address.com>"
- 2. git rebase --continue
+## reset old author
+git rebase -i <parent-commit>
+ 1. mark commits with e
+ 2. git commit --amend --author="Author Name <email@address.com>"
+ 3. git rebase --continue
+ 4. if diverged push -f
 
 =============================================
 Copy commit somewhere
