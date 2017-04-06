@@ -35,10 +35,12 @@ git rebase -i <parent-commit>
  4. if diverged push -f
 
 =============================================
-git branch -m new-name
-git branch -m old-name new-name
-git push origin :old-name new-name
-git push origin -u new-name
+
+git branch -m new-name  
+git branch -m old-name new-name  
+git push origin :old-name new-name  
+git push origin -u new-name  
+
 =============================================
 Copy commit somewhere
 
