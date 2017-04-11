@@ -54,4 +54,8 @@ You can now return to dev:
 git checkout dev
 
 =============================================
+
+git config sendpack.sideband false
+
+=============================================
 http://sethrobertson.github.io/GitFixUm/fixup.html
