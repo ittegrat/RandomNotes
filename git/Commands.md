@@ -19,43 +19,37 @@ git merge --no-commit --no-ff master
 git diff branch1 branch2 -- path/to/file
 git difftool -x C:/Programs/WinMerge/WinMergeU.exe branch1 branch2 -- path/to/file
 
-## abort merge
-git merge --abort
+### Abort merge
+git merge --abort<br>
 git reset --hard HEAD
 
-## delete remote tag
-git tag -d 12345
+### Delete remote tag
+git tag -d 12345<br>
 git push origin :refs/tags/12345
 
-## reset old author
-git rebase -i <parent-commit>
+### Reset old author
+`git rebase -i <parent-commit>`
  1. mark commits with e
- 2. git commit --amend --author="Author Name <email@address.com>"
- 3. git rebase --continue
+ 2. `git commit --amend --author="Author Name <email@address.com>"`
+ 3. `git rebase --continue`
  4. if diverged push -f
 
-=============================================
+### Rename a local and remote branch
+1. Rename the local one: `git branch -m new-name / git branch -m old-name new-name`
+2. Delete the remote one: `git push origin :old-name new-name`
+3. Push the new-name local branch: `git push origin -u new-name`
 
-git branch -m new-name  
-git branch -m old-name new-name  
-git push origin :old-name new-name  
-git push origin -u new-name  
+### cherry-pick
+1. Checkout the receiving branch: `git checkout stable`
+2. Copy the desired commit to the current branch: `git cherry-pick e87568fa`
 
-=============================================
-Copy commit somewhere
-
-Go to the stable branch:
-git checkout stable
-
-Copy the desired commit to the current branch.
-git cherry-pick e87568fa
-
-You can now return to dev:
-git checkout dev
-
-=============================================
+=============================================<br>
 
 git config sendpack.sideband false
 
-=============================================
+=============================================<br>
 http://sethrobertson.github.io/GitFixUm/fixup.html
+
+### SSL Problems
+`GIT_SSL_NO_VERIFY=true git ...`<br>
+`git config [–local] http.sslVerify false`
