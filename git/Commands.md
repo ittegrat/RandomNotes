@@ -43,6 +43,12 @@ git push origin :refs/tags/12345
 1. Checkout the receiving branch: `git checkout stable`
 2. Copy the desired commit to the current branch: `git cherry-pick e87568fa`
 
+### Move the most recent commit(s) to a new branch
+Note: Any changes not committed will be lost.
+1. Create a new branch, saving the desired commits: `git branch newbranch`
+2. Move current branch back by 3 commits: `git reset --hard HEAD~3`
+3. Go to the new branch that still has the desired commits: `git checkout newbranch`
+
 =============================================<br>
 
 git config sendpack.sideband false
