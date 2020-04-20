@@ -35,9 +35,9 @@ git push origin :refs/tags/12345
  4. if diverged push -f
 
 ### Mirroring a repository
-1. git clone --bare https://github.com/exampleuser/old-repository.git
-2. cd old-repository.git
-3. git push --mirror https://github.com/exampleuser/new-repository.git
+1. `git clone --bare https://github.com/exampleuser/old-repository.git`
+2. `cd old-repository.git`
+3. `git push --mirror https://github.com/exampleuser/new-repository.git`
 
 ### Rename a local and remote branch
 1. Rename the local one: `git branch -m new-name / git branch -m old-name new-name`
